@@ -11,6 +11,22 @@
   border-radius: 7px;
 }
 
+#landing-Box {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0);
+  border-radius: 7px;
+}
+
+.comment {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0);
+  border-radius: 7px;
+}
+
+.comment-text {
+  color: white;
+}
+
 #landing {
   display: flex;
   align-items: center;
