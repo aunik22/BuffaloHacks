@@ -11,7 +11,22 @@ var mean = [
 var max = [64.0, 1.0, 53.13, 5.0, 1.0, 3.0, 63770.42801];
 var min = [18.0, 0.0, 15.96, 0.0, 0.0, 0.0, 1121.8739];
 
+var z = document.getElementById("intro-text");
+kid1 = document.createTextNode("Health Insurance Predictor");
+kid2 = document.createTextNode("Know How Much Your Health Insurance Should Cost");
+z.appendChild(kid1);
+
+var a = document.getElementById("navTitle");
+a.appendChild(kid2);
+
+var result = 0;
+
+
 function submitted() {
+
+
+
+
   var inputs = document.getElementsByClassName("w3-input");
 
   for (i = 0; i < inputs.length; i++) {
@@ -53,27 +68,27 @@ function submitted() {
 
   for (i = 0; i < 6; i++){
       norms.push(encode(orig[i], mean[i], max[i], min[i]));
+      console.log(norms[i]);
   }
 
   result = 0.00113973 + norms[0] * 0.18647177 + norms[1] * (-0.00100898) + norms[2] * 0.2049251 + norms[3] * 0.03886722 + norms[4] * 0.37976515 + norms[5] * (-0.01930108);
-    /*
-  window.location.href = "results.html";
-  var div = document.getElementById("results-Box");
-  var h2 = document.createElement("H2");
-  h2.appendChild(document.createTextNode("$ " + result));
-  div.appendChild(h2);
-    */
-
-  for (i = 0; i < 6; i++) {
-      console.log("i: " + orig[i]);
-  }
   result = Math.ceil(decodeCharge(result));
   console.log("RESULT: " + result);
+  //var z = document.getElementById("intro-text");
+
+ // window.location.href = "results.html";
+
+  var resultnode = document.createTextNode("Result: $" + result);
+  document.getElementById("n").appendChild(resultnode);
+
+
+ 
+
 
   function calculateBmi(height, weight) {
       var newHeight = height / 39.37;
       var newWeight = weight / 2.205;
-      var bmi = weight / (height * height);
+      var bmi = newWeight / (newHeight * newHeight);
       return bmi;
   }
 

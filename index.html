@@ -4,101 +4,107 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  
+  <script src="jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  
 </head>
 
 <body>
 
-  <div class="wrapper">
-    <nav>
-      Know How Much Your Health Insurance Should Cost
-    </nav>
-  </div>
-
-  <div id="landing">
-    <div class="landing-Box">
-      <h2 id="intro-text">Health Insurance Predictor</h2>
-    </div>
-  </div>
-
-
-
-  <div id="container">
-    <div id="formHeader" class="header">
-      <h2>Input Form</h2>
+    <div class="wrapper">
+        <nav id="navTitle">
+            
+        </nav>
     </div>
 
-    <form class="w3-container">
-        <p>
-            <label>First Name</label>
-            <input id="inputFirstName" class="w3-input" type="text">
-        </p>
-        <br>
-        <p>
-            <label>Last Name</label>
-            <input id="inputLastName" class="w3-input" type="text">
-        </p>
-        <br>
-        <p>
-            <label>Age</label>
-            <input id="inputAge" class="w3-input" type="number">
-        </p>
-        <br>
-        <p>
-            <label>Sex</label>
-            <select class="w3-input" name="smoker">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-        </p>
-        <br>
-        <p>
-            <label>Height (in)</label>
-            <input id="inputHeight" class="w3-input" type="number">
-        </p>
-        <br>
-        <p>
-            <label>Weight (LBS)</label>
-            <input id="inputWeight" class="w3-input" type="number">
-        </p>
-        <br>
-        <p>
-            <label>How many kids do you have?</label>
-            <input id="inputNumberOfKids" class="w3-input" type="number">
-        </p>
-        <br>
-        <p>
-            <label>Are you a smoker?</label>
-            <select class="w3-input" name="smoker">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-        </p>
-        <br>
-        <p>
-            <label>Region</label>
-            <select class="w3-input" name="smoker">
-                <option value="Northwest">Northwest</option>
-                <option value="Northeast">Northeast</option>
-                <option value="Southwest">Southwest</option>
-                <option value="Southeast">Southeast</option>
-            </select>
-        </p>
-        <br>
-        <br>
-        <br>
-        <p>
-            <input id="submitBut" onclick="submitted()" class="w3-input" type="Submit">
-        </p>
-        <br>
-        <br>
-        <br>
-    </form>
-  </div>
+    <div id="landing">
+        <div class="landing-Box">
+            <h2 id="intro-text"></h2>
+        </div>
+    </div>
 
+
+
+    <div id="container">
+        <div id="formHeader" class="header">
+            <h2>Input Form</h2>
+        </div>
+
+        <form class="w3-container">
+            <p>
+                <label>First Name</label>
+                <input id="inputFirstName" class="w3-input" type="text">
+            </p>
+            <br>
+            <p>
+                <label>Last Name</label>
+                <input id="inputLastName" class="w3-input" type="text">
+            </p>
+            <br>
+            <p>
+                <label>Age</label>
+                <input id="inputAge" class="w3-input" type="number">
+            </p>
+            <br>
+            <p>
+                <label>Sex</label>
+                <select class="w3-input" name="sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </p>
+            <br>
+            <p>
+                <label>Height (in)</label>
+                <input id="inputHeight" class="w3-input" type="number">
+            </p>
+            <br>
+            <p>
+                <label>Weight (LBS)</label>
+                <input id="inputWeight" class="w3-input" type="number">
+            </p>
+            <br>
+            <p>
+                <label>How many kids do you have?</label>
+                <input id="inputNumberOfKids" class="w3-input" type="number">
+            </p>
+            <br>
+            <p>
+                <label>Are you a smoker?</label>
+                <select class="w3-input" name="smoker">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </p>
+            <br>
+            <p>
+                <label>Region</label>
+                <select class="w3-input" name="region">
+                    <option value="Northwest">Northwest</option>
+                    <option value="Northeast">Northeast</option>
+                    <option value="Southwest">Southwest</option>
+                    <option value="Southeast">Southeast</option>
+                </select>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                <a href="#end"> <input id="submitBut" onclick="submitted()" class="w3-input" type="button"></a>
+            </p>
+            <br>
+            <br>
+            <br>
+        </form>
+        <div id="n">
+            
+        </div>
+        <div id="end">
+            If You Are Paying Anything Over This, You Should Change Your Provider
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
