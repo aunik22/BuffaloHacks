@@ -8,8 +8,8 @@ var mean = [
   1.515695,
   13270.422265
 ];
-var maximum = [64.0, 1.0, 53.13, 5.0, 1.0, 3.0, 63770.42801];
-var minimum = [18.0, 0.0, 15.96, 0.0, 0.0, 0.0, 1121.8739];
+var max = [64.0, 1.0, 53.13, 5.0, 1.0, 3.0, 63770.42801];
+var min = [18.0, 0.0, 15.96, 0.0, 0.0, 0.0, 1121.8739];
 
 function submitted() {
   var inputs = document.getElementsByClassName("w3-input");
@@ -56,12 +56,19 @@ function submitted() {
   }
 
   result = 0.00113973 + norms[0] * 0.18647177 + norms[1] * (-0.00100898) + norms[2] * 0.2049251 + norms[3] * 0.03886722 + norms[4] * 0.37976515 + norms[5] * (-0.01930108);
-
+    /*
   window.location.href = "results.html";
   var div = document.getElementById("results-Box");
   var h2 = document.createElement("H2");
-  h2.appendChild(document.createTextNode("$ " + str(result)));
+  h2.appendChild(document.createTextNode("$ " + result));
   div.appendChild(h2);
+    */
+
+  for (i = 0; i < 6; i++) {
+      console.log("i: " + orig[i]);
+  }
+  result = Math.ceil(decodeCharge(result));
+  console.log("RESULT: " + result);
 
   function calculateBmi(height, weight) {
       var newHeight = height / 39.37;
@@ -100,7 +107,7 @@ function submitted() {
   }
 
   function decodeCharge(charge) {
-      var finalCharge = charge * (maximum[6] - minimum[6]) + mean[6];
+      var finalCharge = charge * (max[6] - min[6]) + mean[6];
       return finalCharge;
   }
 
