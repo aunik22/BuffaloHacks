@@ -52,3 +52,25 @@ nav.black {
   padding: 0px 60px;
   z-index: 3;
 }
+
+#container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#formHeader {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgba(46, 106, 235, 0.8);
+    border-radius: 25px;
+}
+
+#formHeader h2 {
+    text-align: center;
+    color: white;
+}
+
+#submitBut {
+    background-color: rgba(46, 106, 235, 0.8);
+    border-radius: 25px;    
+}
