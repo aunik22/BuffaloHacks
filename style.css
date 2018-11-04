@@ -72,5 +72,6 @@ nav.black {
 
 #submitBut {
     background-color: rgba(46, 106, 235, 0.8);
-    border-radius: 25px;    
+    border-radius: 25px;
+    color: white;
 }
